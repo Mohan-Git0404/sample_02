@@ -1,0 +1,169 @@
+Started by user Mohan Baljeguden
+
+Checking out git https://stash.verizon.com/scm/sasp/sasp_test_automation.git into /var/jenkins_home/jobs/test_sasp_TS_core_API/workspace@script/3a146a0dbb71ccd6dda1cb50e136ce811e18de960037009d769d5f6da98389db to read scripts/jenkins/staging/sasp_staging_usecase_recom_e2e_test
+The recommended git tool is: NONE
+using credential jenkins/git/credentials
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/test_sasp_TS_core_API/workspace@script/3a146a0dbb71ccd6dda1cb50e136ce811e18de960037009d769d5f6da98389db/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.verizon.com/scm/sasp/sasp_test_automation.git # timeout=10
+Fetching upstream changes from https://stash.verizon.com/scm/sasp/sasp_test_automation.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git fetch --tags --force --progress -- https://stash.verizon.com/scm/sasp/sasp_test_automation.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/jenkins_new_API_TSCore^{commit} # timeout=10
+Checking out Revision 994d3160422f96d56c6f93d24068c71d67064b70 (origin/jenkins_new_API_TSCore)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 994d3160422f96d56c6f93d24068c71d67064b70 # timeout=10
+Commit message: "Added addition commands test sasp in use case file"
+ > git rev-list --no-walk a327b5a7ae9ff192d429527464e7732f1c6bac41 # timeout=10
+Loading library jenkins-libs@develop
+Attempting to resolve develop from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git ls-remote -h -t -- https://stash.verizon.com/scm/npdap/jenkins-libs.git # timeout=10
+Found match: refs/heads/develop revision a58876d91c09351ba6ffeac32cc90f3baa209487
+The recommended git tool is: git
+using credential jenkins/git/credentials
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/test_sasp_TS_core_API/workspace@libs/065e19d53d83ec3cc0b51ace402411cbd1fa083ca7d4033f9d164fca0284c738/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.verizon.com/scm/npdap/jenkins-libs.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://stash.verizon.com/scm/npdap/jenkins-libs.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git fetch --no-tags --force --progress -- https://stash.verizon.com/scm/npdap/jenkins-libs.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision a58876d91c09351ba6ffeac32cc90f3baa209487 (develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a58876d91c09351ba6ffeac32cc90f3baa209487 # timeout=10
+Commit message: "Pull request #159: TOTFT-51310 bitbucket functions"
+ > git rev-list --no-walk a58876d91c09351ba6ffeac32cc90f3baa209487 # timeout=10
+Loading library jenkins-team@develop
+Attempting to resolve develop from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git ls-remote -h -t -- https://stash.verizon.com/scm/npdap/jenkins-libs-ts.git # timeout=10
+Found match: refs/heads/develop revision f8ca5852b1db9fe398218e6873fcd10cf7f729be
+The recommended git tool is: NONE
+using credential jenkins/git/credentials
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/test_sasp_TS_core_API/workspace@libs/5fdb0222e0afd0aabf996d515b5b3bb7c25bc51881e8d053e4a69c1597bf5fa9/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.verizon.com/scm/npdap/jenkins-libs-ts.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://stash.verizon.com/scm/npdap/jenkins-libs-ts.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git fetch --no-tags --force --progress -- https://stash.verizon.com/scm/npdap/jenkins-libs-ts.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision f8ca5852b1db9fe398218e6873fcd10cf7f729be (develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f8ca5852b1db9fe398218e6873fcd10cf7f729be # timeout=10
+Commit message: "Pull request #67: Disabled fortify scan for TSSDK services"
+ > git rev-list --no-walk f8ca5852b1db9fe398218e6873fcd10cf7f729be # timeout=10
+[Pipeline] Start of Pipeline
+[Pipeline] podTemplate
+[Pipeline] {
+[Pipeline] properties
+[Pipeline] node
+Created Pod: staging-us-east-1 ts/test-sasp-ts-core-api-18-9tr2m-m1nc5-w8mzp
+Agent test-sasp-ts-core-api-18-9tr2m-m1nc5-w8mzp
+ is provisioned from template test_sasp_TS_core_API_18-9tr2m-m1nc5
+Running on test-sasp-ts-core-api-18-9tr2m-m1nc5-w8mzp
+ in /home/jenkins/agent/workspace/test_sasp_TS_core_API
+[Pipeline] {
+[Pipeline] container
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential jenkins/git/credentials
+Warning: JENKINS-30600: special launcher org.csanchez.jenkins.plugins.kubernetes.pipeline.ContainerExecDecorator$1@679f17c; decorates RemoteLauncher[hudson.remoting.Channel@6e53e406:test-sasp-ts-core-api-18-9tr2m-m1nc5-w8mzp] will be ignored (a typical symptom is the Git executable not being run inside a designated container)
+Cloning the remote Git repository
+Cloning repository https://stash.verizon.com/scm/sasp/sasp_test_automation.git
+ > git init /home/jenkins/agent/workspace/test_sasp_TS_core_API # timeout=10
+Fetching upstream changes from https://stash.verizon.com/scm/sasp/sasp_test_automation.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git fetch --tags --force --progress -- https://stash.verizon.com/scm/sasp/sasp_test_automation.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Checking out Revision 994d3160422f96d56c6f93d24068c71d67064b70 (origin/jenkins_new_API_TSCore)
+ > git config remote.origin.url https://stash.verizon.com/scm/sasp/sasp_test_automation.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/jenkins_new_API_TSCore^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 994d3160422f96d56c6f93d24068c71d67064b70 # timeout=10
+Commit message: "Added addition commands test sasp in use case file"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Configure Git Safe Directory)
+[Pipeline] sh
++ git config --global --add safe.directory /home/jenkins/agent/workspace/SAAS_Automation_API
++ git config --global --add safe.directory /home/jenkins/agent/workspace/SAAS_Automation_API/uaf_service_library_sasp
++ git config --global --add safe.directory /home/jenkins/agent/workspace/test_sasp_TS_core_API
++ git config --global --add safe.directory /home/jenkins/agent/workspace/test_sasp_TS_core_API/uaf_service_library_sasp
++ git submodule sync --recursive
++ git submodule update --init --recursive --remote
+Submodule 'uaf_service_library_sasp' (https://stash.verizon.com/scm/uaf/uaf_service_library_sasp.git) registered for path 'uaf_service_library_sasp'
+Cloning into '/home/jenkins/agent/workspace/test_sasp_TS_core_API/uaf_service_library_sasp'...
+fatal: could not read Username for 'https://stash.verizon.com': No such device or address
+fatal: clone of 'https://stash.verizon.com/scm/uaf/uaf_service_library_sasp.git' into submodule path '/home/jenkins/agent/workspace/test_sasp_TS_core_API/uaf_service_library_sasp' failed
+Failed to clone 'uaf_service_library_sasp'. Retry scheduled
+Cloning into '/home/jenkins/agent/workspace/test_sasp_TS_core_API/uaf_service_library_sasp'...
+fatal: could not read Username for 'https://stash.verizon.com': No such device or address
+fatal: clone of 'https://stash.verizon.com/scm/uaf/uaf_service_library_sasp.git' into submodule path '/home/jenkins/agent/workspace/test_sasp_TS_core_API/uaf_service_library_sasp' failed
+Failed to clone 'uaf_service_library_sasp' a second time, aborting
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] echo
+An error occurred: script returned exit code 1
+[Pipeline] stage
+[Pipeline] { (Publish & Archive Results)
+[Pipeline] sh
++ mkdir -p allure-results
++ mkdir -p junit-results
++ echo Checking for HTML report again:
+Checking for HTML report again:
++ ls -l /home/jenkins/agent/workspace/test_sasp_TS_core_API/report.html
+ls: cannot access '/home/jenkins/agent/workspace/test_sasp_TS_core_API/report.html': No such file or directory
++ true
+[Pipeline] allure
+Unpacking https://repo1.maven.org/maven2/io/qameta/allure/allure-commandline/2.30.0/allure-commandline-2.30.0.zip to /home/jenkins/agent/tools/ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation/allure on test-sasp-ts-core-api-18-9tr2m-m1nc5-w8mzp
+Executing sh script inside container python3 of pod test-sasp-ts-core-api-18-9tr2m-m1nc5-w8mzp
+Executing command: "/home/jenkins/agent/tools/ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation/allure/bin/allure" "generate" "-c" "-o" "/home/jenkins/agent/workspace/test_sasp_TS_core_API/allure-report" 
+exit
+Report successfully generated to /home/jenkins/agent/workspace/test_sasp_TS_core_API/allure-report
+Allure report was successfully generated.
+Creating artifact for the build.
+Artifact was added to the build.
+[Pipeline] echo
+Sending build notification email...
+[Pipeline] emailext
+Sending email to: baljeguden.mohan@in.verizon.com
+[Pipeline] echo
+Archiving Results...
+[Pipeline] retry
+[Pipeline] {
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] }
+[Pipeline] // retry
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // container
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // podTemplate
+[Pipeline] End of Pipeline
+Finished: FAILURE
