@@ -1,0 +1,152 @@
+@Library(['jenkins-libs', 'jenkins-team'])
+import com.tscloudservice.Workers
+
+def worker = new Workers([cloud: "staging", region: "us-east-1"], this)
+
+worker.python3([tag: "3.9.20-bullseye-jdk11-tox", credentialsId: 'jenkins/git/credentials']) {
+
+  // Pipeline Trigger Setup Below
+  def triggers = []
+  if (env.BRANCH_NAME == 'jenkins_new_API_TSCore') {
+    triggers << cron('H 12 * * *') // At 12:00PM to 12:59PM UTC on every
+  }
+
+  properties([
+    pipelineTriggers(triggers),
+    parameters([
+      string(name: 'TEST_FILE', defaultValue: 'tests/api_tests/sensing_api', description: 'Path to the test file to run all the test cases')
+    ])
+  ])
+
+  node(POD_LABEL) {
+    container('python3') {
+      withEnv([
+        "PYTHONPATH=${WORKSPACE}/sasp_test_automation:${WORKSPACE}",
+        "TEST_FILE=${params.TEST_FILE}",
+        "CONFIG_FILE=${WORKSPACE}/resources/config/config_staging.ini",
+        "TEST_ENV=JENKINS"
+      ]) {
+        try {
+          stage('Checkout') {
+            checkout scm
+          }
+
+          stage('Configure Git Safe Directory') {
+            sh '''
+              git config --global --add safe.directory /home/jenkins/agent/workspace/SAAS_Automation_API
+              git config --global --add safe.directory /home/jenkins/agent/workspace/SAAS_Automation_API/uaf_service_library_sasp
+              git config --global --add safe.directory /home/jenkins/agent/workspace/test_sasp_TS_core_API
+              git config --global --add safe.directory /home/jenkins/agent/workspace/test_sasp_TS_core_API/uaf_service_library_sasp
+              git submodule sync --recursive
+              git submodule update --init --recursive --remote
+
+            '''
+          }
+
+          stage('Initialize Submodules') {
+            withCredentials([usernamePassword(credentialsId: 'jenkins/git/credentials', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
+              sh '''
+                git config --global credential.helper '!f() { echo username=$GIT_USERNAME; echo password=$GIT_PASSWORD; }; f'
+                git submodule update --init --recursive
+              '''
+            }
+          }
+
+          stage('Check tox and Python version') {
+            sh 'tox --version'
+            sh 'python --version'
+            sh 'pip list'
+          }
+
+          stage('Setup Python Environment') {
+            sh 'pip install tox pytest allure-pytest'
+          }
+
+          stage("Run Tests") {
+            catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+              sh '''
+               echo "Running tox with verbose output"
+               tox -vv -e functional_test-ci || true
+               '''
+            }
+          }
+        } catch (e) {
+          echo "An error occurred: ${e.message}"
+          currentBuild.result = 'FAILURE'
+        } finally {
+          // Always run these steps, even if there's an error
+          stage("Publish & Archive Results") {
+            sh '''
+              mkdir -p allure-results
+              mkdir -p junit-results
+              echo "Checking for HTML report again:"
+              ls -l ${WORKSPACE}/report.html || true
+            '''
+
+            allure([
+              includeProperties: false,
+              jdk: '',
+              reportBuildPolicy: 'ALWAYS',
+              results: [[path: "$WORKSPACE/allure-results"]]
+            ])
+
+            echo 'Sending build notification email...'
+            emailext(
+                   subject: "Build Notification: ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                       body: """
+                          <html>
+                            <body>
+                                <p>Build Status: ${currentBuild.result ?: 'UNKNOWN'}</p>
+
+                                <p>Build Details:<br>
+                                      1. Job Name: ${env.JOB_NAME}<br>
+                                      2. Build Number: ${env.BUILD_NUMBER}</p>
+
+                                <p>Next Steps:<br>
+                                      1. Review the Allure report:<br>
+                                        <a href="${env.BUILD_URL}allure">${env.BUILD_URL}allure</a><br>
+
+                                      2. Review the HTML report (attached to this email)<br>
+                                        <a href="${env.BUILD_URL}artifact/report.html">${env.BUILD_URL}artifact/report.html</a><br>
+
+                                      3. Check Jenkins build details:<br>
+                                        <a href="${env.BUILD_URL}">${env.BUILD_URL}</a><br>
+
+                                      4. Analyze test results and logs<br>
+
+                                      5. Take necessary actions based on findings</p>
+
+                                <p>Note: If the status is UNSTABLE, it means the build completed but there might be test failures or warnings that need attention.</p>
+
+                                <p>Please investigate and address any issues found in the test results or build logs.</p>
+                            </body>
+                          </html>
+                          """,
+                   mimeType: 'text/html',
+                   to: 'baljeguden.mohan@in.verizon.com',
+                   attachmentsPattern: 'report.html',
+                   attachLog: true
+            )
+
+            echo "Archiving Results..."
+            retry(3) {
+              archiveArtifacts artifacts: 'allure-results/*, junit-results/*.xml, report/*.html, *.html', allowEmptyArchive: true, followSymlinks: false
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Add an explanation about the UNSTABLE status
+if (currentBuild.result == 'UNSTABLE') {
+    echo """
+    NOTE: The build status is UNSTABLE. This means:
+    1. The pipeline completed without fatal errors.
+    2. There might be non-critical issues, warnings, or test failures.
+    3. Some parts of the build may have succeeded while others encountered problems.
+    4. This status is often used to indicate that while the build process completed, there are issues that need attention.
+    Please review the build logs and test results for more details.
+    """
+}
