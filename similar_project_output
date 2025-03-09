@@ -1,0 +1,718 @@
+Started by user Jayanth R
+
+Checking out git https://stash.verizon.com/scm/vesa/vaas_test_automation.git into /var/jenkins_home/jobs/test_5G_VI_API/workspace@script/5af8fe8df6f86049e8b5a7f1205e6ae178cb9a5ec43b6c31cac9fdf8d0ffed41 to read scripts/jenkins/jenkinsfile_vision_allcases
+The recommended git tool is: NONE
+using credential jenkins/git/credentials
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/test_5G_VI_API/workspace@script/5af8fe8df6f86049e8b5a7f1205e6ae178cb9a5ec43b6c31cac9fdf8d0ffed41/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.verizon.com/scm/vesa/vaas_test_automation.git # timeout=10
+Fetching upstream changes from https://stash.verizon.com/scm/vesa/vaas_test_automation.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git fetch --tags --force --progress -- https://stash.verizon.com/scm/vesa/vaas_test_automation.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/develop^{commit} # timeout=10
+Checking out Revision 9f0d34301e0522b520a3fa3b3d44e52777ad3f08 (origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9f0d34301e0522b520a3fa3b3d44e52777ad3f08 # timeout=10
+Commit message: "Pull request #41: NPDIOTS-2358"
+ > git rev-list --no-walk bf9db34dfcfb13b3265f30d015390d9c9c1a4e42 # timeout=10
+Loading library jenkins-libs@develop
+Attempting to resolve develop from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git ls-remote -h -t -- https://stash.verizon.com/scm/npdap/jenkins-libs.git # timeout=10
+Found match: refs/heads/develop revision 3273481223f565d9fc70ff127d2e3951352926b5
+The recommended git tool is: git
+using credential jenkins/git/credentials
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/test_5G_VI_API/workspace@libs/065e19d53d83ec3cc0b51ace402411cbd1fa083ca7d4033f9d164fca0284c738/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.verizon.com/scm/npdap/jenkins-libs.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://stash.verizon.com/scm/npdap/jenkins-libs.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git fetch --no-tags --force --progress -- https://stash.verizon.com/scm/npdap/jenkins-libs.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 3273481223f565d9fc70ff127d2e3951352926b5 (develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3273481223f565d9fc70ff127d2e3951352926b5 # timeout=10
+Commit message: "Pull request #154: TOTFT-49881: trigger job fix"
+ > git rev-list --no-walk 65110dde6c8535b5847ba1ce1f3d69978becffad # timeout=10
+Loading library jenkins-team@develop
+Attempting to resolve develop from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git ls-remote -h -t -- https://stash.verizon.com/scm/npdap/jenkins-libs-ts.git # timeout=10
+Found match: refs/heads/develop revision d82dd630bdc0993f6b8462d98e52a375e6b2ef75
+The recommended git tool is: NONE
+using credential jenkins/git/credentials
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/test_5G_VI_API/workspace@libs/5fdb0222e0afd0aabf996d515b5b3bb7c25bc51881e8d053e4a69c1597bf5fa9/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.verizon.com/scm/npdap/jenkins-libs-ts.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://stash.verizon.com/scm/npdap/jenkins-libs-ts.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git fetch --no-tags --force --progress -- https://stash.verizon.com/scm/npdap/jenkins-libs-ts.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision d82dd630bdc0993f6b8462d98e52a375e6b2ef75 (develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d82dd630bdc0993f6b8462d98e52a375e6b2ef75 # timeout=10
+Commit message: "Automation https://jenkins-nonprod.tscloudservice.com/ts/job/onboardJenkinsJobs/4/: Generated seedjobs [/home/jenkins/workspace/onboardJenkinsJobs/jenkins/pipelines/ci.groovy:/home/jenkins/workspace/onboardJenkinsJobs/jenkins-libs-ts/jobs/nonprod/sasp_sensor_insights_portal_ci.groovy, /home/jenkins/workspace/onboardJenkinsJobs/jenkins/pipelines/wh.groovy:/home/jenkins/workspace/onboardJenkinsJobs/jenkins-libs-ts/jobs/nonprod/sasp_wh_listener.groovy] for https://stash.verizon.com/scm/sasp/sensor-insights-portal.git."
+ > git rev-list --no-walk d82dd630bdc0993f6b8462d98e52a375e6b2ef75 # timeout=10
+[Pipeline] Start of Pipeline
+[Pipeline] podTemplate
+[Pipeline] {
+[Pipeline] properties
+[Pipeline] node
+Created Pod: staging-us-east-1 ts/test-5g-vi-api-42-7jvqk-85gn8-640tn
+Agent test-5g-vi-api-42-7jvqk-85gn8-640tn
+ is provisioned from template test_5G_VI_API_42-7jvqk-85gn8
+Running on test-5g-vi-api-42-7jvqk-85gn8-640tn
+ in /home/jenkins/agent/workspace/test_5G_VI_API
+[Pipeline] {
+[Pipeline] container
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential jenkins/git/credentials
+Warning: JENKINS-30600: special launcher org.csanchez.jenkins.plugins.kubernetes.pipeline.ContainerExecDecorator$1@241ade30; decorates RemoteLauncher[hudson.remoting.Channel@77d053ed:test-5g-vi-api-42-7jvqk-85gn8-640tn] will be ignored (a typical symptom is the Git executable not being run inside a designated container)
+Cloning the remote Git repository
+Cloning repository https://stash.verizon.com/scm/vesa/vaas_test_automation.git
+ > git init /home/jenkins/agent/workspace/test_5G_VI_API # timeout=10
+Fetching upstream changes from https://stash.verizon.com/scm/vesa/vaas_test_automation.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials Jenkins Stash Credentials
+ > git fetch --tags --force --progress -- https://stash.verizon.com/scm/vesa/vaas_test_automation.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://stash.verizon.com/scm/vesa/vaas_test_automation.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Checking out Revision 9f0d34301e0522b520a3fa3b3d44e52777ad3f08 (origin/develop)
+ > git rev-parse origin/develop^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9f0d34301e0522b520a3fa3b3d44e52777ad3f08 # timeout=10
+Commit message: "Pull request #41: NPDIOTS-2358"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Configure Git Safe Directory)
+[Pipeline] sh
++ git config --global --add safe.directory /home/jenkins/agent/workspace/test_5G_VI_API
++ git config --global --add safe.directory /home/jenkins/agent/workspace/test_5G_VI_API/uaf_service_library_vision
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Initialize Submodules)
+[Pipeline] withCredentials
+Masking supported pattern matches of $GIT_USERNAME or $GIT_PASSWORD
+[Pipeline] {
+[Pipeline] sh
++ git config --global credential.helper !f() { echo username=$GIT_USERNAME; echo password=$GIT_PASSWORD; }; f
++ git submodule update --init --recursive
+Submodule 'uaf_service_library_vision' (https://stash.verizon.com/scm/uaf/uaf_service_library_vision.git) registered for path 'uaf_service_library_vision'
+Cloning into '/home/jenkins/agent/workspace/test_5G_VI_API/uaf_service_library_vision'...
+Submodule path 'uaf_service_library_vision': checked out '960c68488616130259dc632c4196a1ea9a3220da'
+Submodule 'uaf_core_library' (https://stash.verizon.com/scm/uaf/uaf_core_library.git) registered for path 'uaf_service_library_vision/uaf_core_library'
+Cloning into '/home/jenkins/agent/workspace/test_5G_VI_API/uaf_service_library_vision/uaf_core_library'...
+Submodule path 'uaf_service_library_vision/uaf_core_library': checked out '774d7652e06cf193e6b3c92efcbc89ff9e6e1335'
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Check tox and Python version)
+[Pipeline] sh
++ tox --version
+4.20.0 from /usr/local/lib/python3.9/site-packages/tox/__init__.py
+[Pipeline] sh
++ python --version
+Python 3.9.20
+[Pipeline] sh
++ pip list
+Package       Version
+------------- -------
+cachetools    5.5.0
+chardet       5.2.0
+colorama      0.4.6
+distlib       0.3.8
+filelock      3.16.1
+packaging     24.1
+pip           23.0.1
+platformdirs  4.3.6
+pluggy        1.5.0
+pyproject-api 1.8.0
+setuptools    58.1.0
+tomli         2.0.1
+tox           4.20.0
+virtualenv    20.26.5
+wheel         0.44.0
+
+[notice] A new release of pip is available: 23.0.1 -> 24.3.1
+[notice] To update, run: pip install --upgrade pip
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Setup Python Environment)
+[Pipeline] sh
++ pip install tox pytest allure-pytest
+Requirement already satisfied: tox in /usr/local/lib/python3.9/site-packages (4.20.0)
+Collecting pytest
+  Downloading pytest-8.3.4-py3-none-any.whl (343 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.1/343.1 kB 18.8 MB/s eta 0:00:00
+Collecting allure-pytest
+  Downloading allure_pytest-2.13.5-py3-none-any.whl (11 kB)
+Requirement already satisfied: packaging>=24.1 in /usr/local/lib/python3.9/site-packages (from tox) (24.1)
+Requirement already satisfied: chardet>=5.2 in /usr/local/lib/python3.9/site-packages (from tox) (5.2.0)
+Requirement already satisfied: cachetools>=5.5 in /usr/local/lib/python3.9/site-packages (from tox) (5.5.0)
+Requirement already satisfied: platformdirs>=4.2.2 in /usr/local/lib/python3.9/site-packages (from tox) (4.3.6)
+Requirement already satisfied: pyproject-api>=1.7.1 in /usr/local/lib/python3.9/site-packages (from tox) (1.8.0)
+Requirement already satisfied: tomli>=2.0.1 in /usr/local/lib/python3.9/site-packages (from tox) (2.0.1)
+Requirement already satisfied: colorama>=0.4.6 in /usr/local/lib/python3.9/site-packages (from tox) (0.4.6)
+Requirement already satisfied: filelock>=3.15.4 in /usr/local/lib/python3.9/site-packages (from tox) (3.16.1)
+Requirement already satisfied: pluggy>=1.5 in /usr/local/lib/python3.9/site-packages (from tox) (1.5.0)
+Requirement already satisfied: virtualenv>=20.26.3 in /usr/local/lib/python3.9/site-packages (from tox) (20.26.5)
+Collecting iniconfig
+  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting exceptiongroup>=1.0.0rc8
+  Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+Collecting allure-python-commons==2.13.5
+  Downloading allure_python_commons-2.13.5-py3-none-any.whl (15 kB)
+Collecting attrs>=16.0.0
+  Downloading attrs-24.3.0-py3-none-any.whl (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.4/63.4 kB 14.6 MB/s eta 0:00:00
+Requirement already satisfied: distlib<1,>=0.3.7 in /usr/local/lib/python3.9/site-packages (from virtualenv>=20.26.3->tox) (0.3.8)
+Installing collected packages: iniconfig, exceptiongroup, attrs, pytest, allure-python-commons, allure-pytest
+Successfully installed allure-pytest-2.13.5 allure-python-commons-2.13.5 attrs-24.3.0 exceptiongroup-1.2.2 iniconfig-2.0.0 pytest-8.3.4
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 24.3.1
+[notice] To update, run: pip install --upgrade pip
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Tests)
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] sh
++ echo Running tox with verbose output
+Running tox with verbose output
++ tox -vv -e functional_test-ci
+ROOT: 189 D setup logging to DEBUG on pid 260 [tox/report.py:222]
+functional_test-ci: 300 D created app data folder /root/.local/share/virtualenv [virtualenv/app_data/__init__.py:40]
+functional_test-ci: 304 I find interpreter for spec PythonSpec(path=/usr/local/bin/python3.9) [virtualenv/discovery/builtin.py:72]
+functional_test-ci: 304 D filesystem is case-sensitive [virtualenv/info.py:25]
+functional_test-ci: 304 I proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/usr/local/bin/python3.9, platform=linux, version='3.9.20 (main, Sep 12 2024, 21:07:18) \n[GCC 10.2.1 20210110]', encoding_fs_io=utf-8-utf-8) [virtualenv/discovery/builtin.py:79]
+functional_test-ci: 304 D accepted PythonInfo(spec=CPython3.9.20.final.0-64, exe=/usr/local/bin/python3.9, platform=linux, version='3.9.20 (main, Sep 12 2024, 21:07:18) \n[GCC 10.2.1 20210110]', encoding_fs_io=utf-8-utf-8) [virtualenv/discovery/builtin.py:81]
+functional_test-ci: 380 I create virtual environment via CPython3Posix(dest=/home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci, clear=False, no_vcs_ignore=False, global=False) [virtualenv/run/session.py:50]
+functional_test-ci: 380 D create folder /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/bin [virtualenv/util/path/_sync.py:12]
+functional_test-ci: 380 D create folder /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages [virtualenv/util/path/_sync.py:12]
+functional_test-ci: 380 D write /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/pyvenv.cfg [virtualenv/create/pyenv_cfg.py:33]
+functional_test-ci: 380 D 	home = /usr/local/bin [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 381 D 	implementation = CPython [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 381 D 	version_info = 3.9.20.final.0 [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 381 D 	virtualenv = 20.26.5 [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 381 D 	include-system-site-packages = false [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 381 D 	base-prefix = /usr/local [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 381 D 	base-exec-prefix = /usr/local [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 381 D 	base-executable = /usr/local/bin/python3.9 [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 381 D symlink /usr/local/bin/python3.9 to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/bin/python [virtualenv/util/path/_sync.py:32]
+functional_test-ci: 381 D create virtualenv import hook file /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/_virtualenv.pth [virtualenv/create/via_global_ref/api.py:91]
+functional_test-ci: 382 D create /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/_virtualenv.py [virtualenv/create/via_global_ref/api.py:94]
+functional_test-ci: 382 D ============================== target debug ============================== [virtualenv/run/session.py:52]
+functional_test-ci: 382 D debug via /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/bin/python /usr/local/lib/python3.9/site-packages/virtualenv/create/debug.py [virtualenv/create/creator.py:200]
+functional_test-ci: 382 D {
+  "sys": {
+    "executable": "/home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/bin/python",
+    "_base_executable": "/home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/bin/python",
+    "prefix": "/home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci",
+    "base_prefix": "/usr/local",
+    "real_prefix": null,
+    "exec_prefix": "/home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci",
+    "base_exec_prefix": "/usr/local",
+    "path": [
+      "/home/jenkins/agent/workspace/test_5G_VI_API/vaas_test_automation",
+      "/home/jenkins/agent/workspace/test_5G_VI_API",
+      "/usr/local/lib/python39.zip",
+      "/usr/local/lib/python3.9",
+      "/usr/local/lib/python3.9/lib-dynload",
+      "/home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages"
+    ],
+    "meta_path": [
+      "<class '_virtualenv._Finder'>",
+      "<class '_frozen_importlib.BuiltinImporter'>",
+      "<class '_frozen_importlib.FrozenImporter'>",
+      "<class '_frozen_importlib_external.PathFinder'>"
+    ],
+    "fs_encoding": "utf-8",
+    "io_encoding": "utf-8"
+  },
+  "version": "3.9.20 (main, Sep 12 2024, 21:07:18) \n[GCC 10.2.1 20210110]",
+  "makefile_filename": "/usr/local/lib/python3.9/config-3.9-x86_64-linux-gnu/Makefile",
+  "os": "<module 'os' from '/usr/local/lib/python3.9/os.py'>",
+  "site": "<module 'site' from '/usr/local/lib/python3.9/site.py'>",
+  "datetime": "<module 'datetime' from '/usr/local/lib/python3.9/datetime.py'>",
+  "math": "<module 'math' from '/usr/local/lib/python3.9/lib-dynload/math.cpython-39-x86_64-linux-gnu.so'>",
+  "json": "<module 'json' from '/usr/local/lib/python3.9/json/__init__.py'>"
+} [virtualenv/run/session.py:53]
+functional_test-ci: 407 I add seed packages via FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv) [virtualenv/run/session.py:57]
+functional_test-ci: 409 D install pip from wheel /usr/local/lib/python3.9/site-packages/virtualenv/seed/wheels/embed/pip-24.2-py3-none-any.whl via CopyPipInstall [virtualenv/seed/embed/via_app_data/via_app_data.py:49]
+functional_test-ci: 410 D install setuptools from wheel /usr/local/lib/python3.9/site-packages/virtualenv/seed/wheels/embed/setuptools-75.1.0-py3-none-any.whl via CopyPipInstall [virtualenv/seed/embed/via_app_data/via_app_data.py:49]
+functional_test-ci: 410 D install wheel from wheel /usr/local/lib/python3.9/site-packages/virtualenv/seed/wheels/embed/wheel-0.44.0-py3-none-any.whl via CopyPipInstall [virtualenv/seed/embed/via_app_data/via_app_data.py:49]
+functional_test-ci: 461 D build install image for pip-24.2-py3-none-any.whl to /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/pip-24.2-py3-none-any [virtualenv/seed/embed/via_app_data/pip_install/base.py:47]
+functional_test-ci: 462 D build install image for setuptools-75.1.0-py3-none-any.whl to /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/setuptools-75.1.0-py3-none-any [virtualenv/seed/embed/via_app_data/pip_install/base.py:47]
+functional_test-ci: 462 D build install image for wheel-0.44.0-py3-none-any.whl to /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/wheel-0.44.0-py3-none-any [virtualenv/seed/embed/via_app_data/pip_install/base.py:47]
+functional_test-ci: 562 D copy directory /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/wheel-0.44.0-py3-none-any/wheel to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/wheel [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 577 D copy directory /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/wheel-0.44.0-py3-none-any/wheel-0.44.0.dist-info to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/wheel-0.44.0.dist-info [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 580 D copy /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/wheel-0.44.0-py3-none-any/wheel-0.44.0.virtualenv to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/wheel-0.44.0.virtualenv [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 583 D generated console scripts wheel-3.9 wheel3 wheel wheel3.9 [virtualenv/seed/embed/via_app_data/pip_install/base.py:43]
+functional_test-ci: 980 D copy directory /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/pip-24.2-py3-none-any/pip to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/pip [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1077 D copy /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/setuptools-75.1.0-py3-none-any/distutils-precedence.pth to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/distutils-precedence.pth [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1077 D copy directory /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/setuptools-75.1.0-py3-none-any/_distutils_hack to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/_distutils_hack [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1078 D copy directory /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/setuptools-75.1.0-py3-none-any/pkg_resources to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/pkg_resources [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1083 D copy directory /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/setuptools-75.1.0-py3-none-any/setuptools to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/setuptools [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1286 D copy directory /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/pip-24.2-py3-none-any/pip-24.2.dist-info to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/pip-24.2.dist-info [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1288 D copy /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/pip-24.2-py3-none-any/pip-24.2.virtualenv to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/pip-24.2.virtualenv [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1289 D generated console scripts pip-3.9 pip pip3.9 pip3 [virtualenv/seed/embed/via_app_data/pip_install/base.py:43]
+functional_test-ci: 1386 D copy directory /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/setuptools-75.1.0-py3-none-any/setuptools-75.1.0.dist-info to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/setuptools-75.1.0.dist-info [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1387 D copy /root/.local/share/virtualenv/wheel/3.9/image/1/CopyPipInstall/setuptools-75.1.0-py3-none-any/setuptools-75.1.0.virtualenv to /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/lib/python3.9/site-packages/setuptools-75.1.0.virtualenv [virtualenv/util/path/_sync.py:40]
+functional_test-ci: 1388 D generated console scripts  [virtualenv/seed/embed/via_app_data/pip_install/base.py:43]
+functional_test-ci: 1388 I add activators for Bash, CShell, Fish, Nushell, PowerShell, Python [virtualenv/run/session.py:63]
+functional_test-ci: 1390 D write /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/pyvenv.cfg [virtualenv/create/pyenv_cfg.py:33]
+functional_test-ci: 1391 D 	home = /usr/local/bin [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 1391 D 	implementation = CPython [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 1391 D 	version_info = 3.9.20.final.0 [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 1391 D 	virtualenv = 20.26.5 [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 1391 D 	include-system-site-packages = false [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 1391 D 	base-prefix = /usr/local [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 1391 D 	base-exec-prefix = /usr/local [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 1391 D 	base-executable = /usr/local/bin/python3.9 [virtualenv/create/pyenv_cfg.py:38]
+functional_test-ci: 1400 W install_deps> python -I -m pip install pytest-html -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt [tox/tox_env/api.py:426]
+Collecting pytest-html
+  Downloading pytest_html-4.1.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting setuptools==70.0.0 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 1))
+  Downloading setuptools-70.0.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting pytest==7.3.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Downloading pytest-7.3.1-py3-none-any.whl.metadata (7.9 kB)
+Collecting pytest-ordering (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 3))
+  Downloading pytest_ordering-0.6-py3-none-any.whl.metadata (1.1 kB)
+Collecting junit-xml==1.9 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 4))
+  Downloading junit_xml-1.9-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting requests==2.32.3 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 5))
+  Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting paho-mqtt==1.6.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 6))
+  Downloading paho-mqtt-1.6.1.tar.gz (99 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting assertpy==1.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 7))
+  Downloading assertpy-1.1.tar.gz (25 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pytest-rerunfailures==11.1.2 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 8))
+  Downloading pytest_rerunfailures-11.1.2-py3-none-any.whl.metadata (16 kB)
+Collecting curlify==2.2.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 9))
+  Downloading curlify-2.2.1.tar.gz (3.0 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting allure-pytest==2.13.2 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 10))
+  Downloading allure_pytest-2.13.2-py3-none-any.whl.metadata (1.8 kB)
+Collecting selenium==4.27.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading selenium-4.27.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting webdriver-manager==4.0.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 12))
+  Downloading webdriver_manager-4.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting chromedriver-autoinstaller==0.6.4 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 13))
+  Downloading chromedriver_autoinstaller-0.6.4-py3-none-any.whl.metadata (2.1 kB)
+Collecting flake8 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 14))
+  Downloading flake8-7.1.1-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting py==1.11.0 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 16))
+  Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting utils~=1.0.2 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 18))
+  Downloading utils-1.0.2.tar.gz (13 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting urllib3~=2.2.3 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 19))
+  Downloading urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
+Collecting jinja2>=3.0.0 (from pytest-html)
+  Downloading jinja2-3.1.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting pytest-metadata>=2.0.0 (from pytest-html)
+  Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+Collecting iniconfig (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Downloading iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting packaging (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pluggy<2.0,>=0.12 (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Downloading pluggy-1.5.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting exceptiongroup>=1.0.0rc8 (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Downloading exceptiongroup-1.2.2-py3-none-any.whl.metadata (6.6 kB)
+Collecting tomli>=1.0.0 (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+Collecting six (from junit-xml==1.9->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 4))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting charset-normalizer<4,>=2 (from requests==2.32.3->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 5))
+  Downloading charset_normalizer-3.4.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests==2.32.3->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 5))
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting certifi>=2017.4.17 (from requests==2.32.3->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 5))
+  Downloading certifi-2024.12.14-py3-none-any.whl.metadata (2.3 kB)
+Collecting allure-python-commons==2.13.2 (from allure-pytest==2.13.2->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 10))
+  Downloading allure_python_commons-2.13.2-py3-none-any.whl.metadata (1.1 kB)
+Collecting trio~=0.17 (from selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading trio-0.28.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting trio-websocket~=0.9 (from selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading trio_websocket-0.11.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting typing_extensions~=4.9 (from selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting websocket-client~=1.8 (from selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting python-dotenv (from webdriver-manager==4.0.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 12))
+  Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+Collecting attrs>=16.0.0 (from allure-python-commons==2.13.2->allure-pytest==2.13.2->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 10))
+  Downloading attrs-24.3.0-py3-none-any.whl.metadata (11 kB)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 14))
+  Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pycodestyle<2.13.0,>=2.12.0 (from flake8->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 14))
+  Downloading pycodestyle-2.12.1-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<3.3.0,>=3.2.0 (from flake8->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 14))
+  Downloading pyflakes-3.2.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.0.0->pytest-html)
+  Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting sortedcontainers (from trio~=0.17->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting outcome (from trio~=0.17->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting sniffio>=1.3.0 (from trio~=0.17->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting wsproto>=0.14 (from trio-websocket~=0.9->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3,>=1.26->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting h11<1,>=0.9.0 (from wsproto>=0.14->trio-websocket~=0.9->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Downloading pytest_html-4.1.1-py3-none-any.whl (23 kB)
+Downloading setuptools-70.0.0-py3-none-any.whl (863 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 863.4/863.4 kB 45.2 MB/s eta 0:00:00
+Downloading pytest-7.3.1-py3-none-any.whl (320 kB)
+Downloading junit_xml-1.9-py2.py3-none-any.whl (7.1 kB)
+Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading pytest_rerunfailures-11.1.2-py3-none-any.whl (12 kB)
+Downloading allure_pytest-2.13.2-py3-none-any.whl (10 kB)
+Downloading selenium-4.27.1-py3-none-any.whl (9.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 107.1 MB/s eta 0:00:00
+Downloading webdriver_manager-4.0.1-py2.py3-none-any.whl (27 kB)
+Downloading chromedriver_autoinstaller-0.6.4-py3-none-any.whl (7.6 kB)
+Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+Downloading allure_python_commons-2.13.2-py3-none-any.whl (14 kB)
+Downloading pytest_ordering-0.6-py3-none-any.whl (4.6 kB)
+Downloading flake8-7.1.1-py2.py3-none-any.whl (57 kB)
+Downloading urllib3-2.2.3-py3-none-any.whl (126 kB)
+Downloading certifi-2024.12.14-py3-none-any.whl (164 kB)
+Downloading charset_normalizer-3.4.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (146 kB)
+Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+Downloading jinja2-3.1.5-py3-none-any.whl (134 kB)
+Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Downloading packaging-24.2-py3-none-any.whl (65 kB)
+Downloading pluggy-1.5.0-py3-none-any.whl (20 kB)
+Downloading pycodestyle-2.12.1-py2.py3-none-any.whl (31 kB)
+Downloading pyflakes-3.2.0-py2.py3-none-any.whl (62 kB)
+Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+Downloading trio-0.28.0-py3-none-any.whl (486 kB)
+Downloading trio_websocket-0.11.1-py3-none-any.whl (17 kB)
+Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading attrs-24.3.0-py3-none-any.whl (63 kB)
+Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading wsproto-1.2.0-py3-none-any.whl (24 kB)
+Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+Building wheels for collected packages: paho-mqtt, assertpy, curlify, utils
+  Building wheel for paho-mqtt (setup.py): started
+  Building wheel for paho-mqtt (setup.py): finished with status 'done'
+  Created wheel for paho-mqtt: filename=paho_mqtt-1.6.1-py3-none-any.whl size=62117 sha256=b9c4e1fc384b874782ebb43b1b5bb0ba5475cba242ef690bdd012ce3951d21d2
+  Stored in directory: /root/.cache/pip/wheels/0f/90/29/db29bb8ddc98ec5f2363b959130c9ddbcf5cfdb4a00b6184dd
+  Building wheel for assertpy (setup.py): started
+  Building wheel for assertpy (setup.py): finished with status 'done'
+  Created wheel for assertpy: filename=assertpy-1.1-py3-none-any.whl size=42896 sha256=1461e5f89af8d853c8be746ff6d6937647012efed3828f15c60b911b04c3a1ff
+  Stored in directory: /root/.cache/pip/wheels/ef/16/87/eac62501c11d2bd111fe96fbe789d49d0bed6ae92ad483426e
+  Building wheel for curlify (setup.py): started
+  Building wheel for curlify (setup.py): finished with status 'done'
+  Created wheel for curlify: filename=curlify-2.2.1-py3-none-any.whl size=2667 sha256=c37d637f3582430f56ac68b595de6edc0280458278619048dbfff63796b82a27
+  Stored in directory: /root/.cache/pip/wheels/17/6d/bc/95e6610d3594aba71ab78800eb7dcfb1cf317e59122bdcc7bc
+  Building wheel for utils (setup.py): started
+  Building wheel for utils (setup.py): finished with status 'done'
+  Created wheel for utils: filename=utils-1.0.2-py2.py3-none-any.whl size=13906 sha256=705403ba57b97745953e5e6043e1a39899de569767837e43a05d91f4c6fc27df
+  Stored in directory: /root/.cache/pip/wheels/4c/a5/a3/ab48e06c936b39960801612ee2767ff53764119f33d3d646e7
+Successfully built paho-mqtt assertpy curlify utils
+Installing collected packages: sortedcontainers, paho-mqtt, assertpy, websocket-client, utils, urllib3, typing_extensions, tomli, sniffio, six, setuptools, python-dotenv, pysocks, pyflakes, pycodestyle, py, pluggy, packaging, mccabe, MarkupSafe, iniconfig, idna, h11, exceptiongroup, charset-normalizer, certifi, attrs, wsproto, requests, pytest, outcome, junit-xml, jinja2, flake8, chromedriver-autoinstaller, allure-python-commons, webdriver-manager, trio, pytest-rerunfailures, pytest-ordering, pytest-metadata, curlify, allure-pytest, trio-websocket, pytest-html, selenium
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 75.1.0
+    Uninstalling setuptools-75.1.0:
+      Successfully uninstalled setuptools-75.1.0
+Successfully installed MarkupSafe-3.0.2 allure-pytest-2.13.2 allure-python-commons-2.13.2 assertpy-1.1 attrs-24.3.0 certifi-2024.12.14 charset-normalizer-3.4.1 chromedriver-autoinstaller-0.6.4 curlify-2.2.1 exceptiongroup-1.2.2 flake8-7.1.1 h11-0.14.0 idna-3.10 iniconfig-2.0.0 jinja2-3.1.5 junit-xml-1.9 mccabe-0.7.0 outcome-1.3.0.post0 packaging-24.2 paho-mqtt-1.6.1 pluggy-1.5.0 py-1.11.0 pycodestyle-2.12.1 pyflakes-3.2.0 pysocks-1.7.1 pytest-7.3.1 pytest-html-4.1.1 pytest-metadata-3.1.1 pytest-ordering-0.6 pytest-rerunfailures-11.1.2 python-dotenv-1.0.1 requests-2.32.3 selenium-4.27.1 setuptools-70.0.0 six-1.17.0 sniffio-1.3.1 sortedcontainers-2.4.0 tomli-2.2.1 trio-0.28.0 trio-websocket-0.11.1 typing_extensions-4.12.2 urllib3-2.2.3 utils-1.0.2 webdriver-manager-4.0.1 websocket-client-1.8.0 wsproto-1.2.0
+functional_test-ci: 15899 I exit 0 (14.50 seconds) /home/jenkins/agent/workspace/test_5G_VI_API> python -I -m pip install pytest-html -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt pid=274 [tox/execute/api.py:286]
+functional_test-ci: 15900 W freeze> python -m pip freeze --all [tox/tox_env/api.py:426]
+functional_test-ci: 16462 I exit 0 (0.56 seconds) /home/jenkins/agent/workspace/test_5G_VI_API> python -m pip freeze --all pid=469 [tox/execute/api.py:286]
+functional_test-ci: 16462 W allure-pytest==2.13.2,allure-python-commons==2.13.2,assertpy==1.1,attrs==24.3.0,certifi==2024.12.14,charset-normalizer==3.4.1,chromedriver-autoinstaller==0.6.4,curlify==2.2.1,exceptiongroup==1.2.2,flake8==7.1.1,h11==0.14.0,idna==3.10,iniconfig==2.0.0,Jinja2==3.1.5,junit-xml==1.9,MarkupSafe==3.0.2,mccabe==0.7.0,outcome==1.3.0.post0,packaging==24.2,paho-mqtt==1.6.1,pip==24.2,pluggy==1.5.0,py==1.11.0,pycodestyle==2.12.1,pyflakes==3.2.0,PySocks==1.7.1,pytest==7.3.1,pytest-html==4.1.1,pytest-metadata==3.1.1,pytest-ordering==0.6,pytest-rerunfailures==11.1.2,python-dotenv==1.0.1,requests==2.32.3,selenium==4.27.1,setuptools==70.0.0,six==1.17.0,sniffio==1.3.1,sortedcontainers==2.4.0,tomli==2.2.1,trio==0.28.0,trio-websocket==0.11.1,typing_extensions==4.12.2,urllib3==2.2.3,utils==1.0.2,webdriver-manager==4.0.1,websocket-client==1.8.0,wheel==0.44.0,wsproto==1.2.0 [tox/tox_env/python/api.py:268]
+functional_test-ci: 16463 W commands_pre[0]> sh -c 'if [ "$TEST_ENV" = "JENKINS" ]; then tox -e setup_ci; else tox -e setup_local; fi' [tox/tox_env/api.py:426]
+setup_ci: install_deps> python -I -m pip install allure-python-commons tox
+setup_ci: freeze> python -m pip freeze --all
+setup_ci: allure-python-commons==2.13.5,attrs==24.3.0,cachetools==5.5.0,chardet==5.2.0,colorama==0.4.6,distlib==0.3.9,filelock==3.16.1,packaging==24.2,pip==24.2,platformdirs==4.3.6,pluggy==1.5.0,pyproject-api==1.8.0,setuptools==75.1.0,tomli==2.2.1,tox==4.23.2,typing_extensions==4.12.2,virtualenv==20.29.1,wheel==0.44.0
+setup_ci: commands[0]> pip install -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt
+Collecting setuptools==70.0.0 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 1))
+  Using cached setuptools-70.0.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting pytest==7.3.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Using cached pytest-7.3.1-py3-none-any.whl.metadata (7.9 kB)
+Collecting pytest-ordering (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 3))
+  Using cached pytest_ordering-0.6-py3-none-any.whl.metadata (1.1 kB)
+Collecting junit-xml==1.9 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 4))
+  Using cached junit_xml-1.9-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting requests==2.32.3 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 5))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting paho-mqtt==1.6.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 6))
+  Using cached paho_mqtt-1.6.1-py3-none-any.whl
+Collecting assertpy==1.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 7))
+  Using cached assertpy-1.1-py3-none-any.whl
+Collecting pytest-rerunfailures==11.1.2 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 8))
+  Using cached pytest_rerunfailures-11.1.2-py3-none-any.whl.metadata (16 kB)
+Collecting curlify==2.2.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 9))
+  Using cached curlify-2.2.1-py3-none-any.whl
+Collecting allure-pytest==2.13.2 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 10))
+  Using cached allure_pytest-2.13.2-py3-none-any.whl.metadata (1.8 kB)
+Collecting selenium==4.27.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached selenium-4.27.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting webdriver-manager==4.0.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 12))
+  Using cached webdriver_manager-4.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting chromedriver-autoinstaller==0.6.4 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 13))
+  Using cached chromedriver_autoinstaller-0.6.4-py3-none-any.whl.metadata (2.1 kB)
+Collecting flake8 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 14))
+  Using cached flake8-7.1.1-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting pytest-html==4.1.1 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 15))
+  Using cached pytest_html-4.1.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting py==1.11.0 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 16))
+  Using cached py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting utils~=1.0.2 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 18))
+  Using cached utils-1.0.2-py2.py3-none-any.whl
+Collecting urllib3~=2.2.3 (from -r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 19))
+  Using cached urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
+Collecting iniconfig (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Using cached iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: packaging in ./.tox/setup_ci/lib/python3.9/site-packages (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2)) (24.2)
+Requirement already satisfied: pluggy<2.0,>=0.12 in ./.tox/setup_ci/lib/python3.9/site-packages (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2)) (1.5.0)
+Collecting exceptiongroup>=1.0.0rc8 (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2))
+  Using cached exceptiongroup-1.2.2-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: tomli>=1.0.0 in ./.tox/setup_ci/lib/python3.9/site-packages (from pytest==7.3.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 2)) (2.2.1)
+Collecting six (from junit-xml==1.9->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 4))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting charset-normalizer<4,>=2 (from requests==2.32.3->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 5))
+  Using cached charset_normalizer-3.4.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests==2.32.3->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 5))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting certifi>=2017.4.17 (from requests==2.32.3->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 5))
+  Using cached certifi-2024.12.14-py3-none-any.whl.metadata (2.3 kB)
+Collecting allure-python-commons==2.13.2 (from allure-pytest==2.13.2->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 10))
+  Using cached allure_python_commons-2.13.2-py3-none-any.whl.metadata (1.1 kB)
+Collecting trio~=0.17 (from selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached trio-0.28.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting trio-websocket~=0.9 (from selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached trio_websocket-0.11.1-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: typing_extensions~=4.9 in ./.tox/setup_ci/lib/python3.9/site-packages (from selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11)) (4.12.2)
+Collecting websocket-client~=1.8 (from selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting python-dotenv (from webdriver-manager==4.0.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 12))
+  Using cached python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+Collecting jinja2>=3.0.0 (from pytest-html==4.1.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 15))
+  Using cached jinja2-3.1.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting pytest-metadata>=2.0.0 (from pytest-html==4.1.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 15))
+  Using cached pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+Requirement already satisfied: attrs>=16.0.0 in ./.tox/setup_ci/lib/python3.9/site-packages (from allure-python-commons==2.13.2->allure-pytest==2.13.2->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 10)) (24.3.0)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 14))
+  Using cached mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pycodestyle<2.13.0,>=2.12.0 (from flake8->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 14))
+  Using cached pycodestyle-2.12.1-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<3.3.0,>=3.2.0 (from flake8->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 14))
+  Using cached pyflakes-3.2.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.0.0->pytest-html==4.1.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 15))
+  Using cached MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting sortedcontainers (from trio~=0.17->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting outcome (from trio~=0.17->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting sniffio>=1.3.0 (from trio~=0.17->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting wsproto>=0.14 (from trio-websocket~=0.9->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3,>=1.26->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting h11<1,>=0.9.0 (from wsproto>=0.14->trio-websocket~=0.9->selenium==4.27.1->-r /home/jenkins/agent/workspace/test_5G_VI_API/requirements.txt (line 11))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Using cached setuptools-70.0.0-py3-none-any.whl (863 kB)
+Using cached pytest-7.3.1-py3-none-any.whl (320 kB)
+Using cached junit_xml-1.9-py2.py3-none-any.whl (7.1 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached pytest_rerunfailures-11.1.2-py3-none-any.whl (12 kB)
+Using cached allure_pytest-2.13.2-py3-none-any.whl (10 kB)
+Using cached selenium-4.27.1-py3-none-any.whl (9.7 MB)
+Using cached webdriver_manager-4.0.1-py2.py3-none-any.whl (27 kB)
+Using cached chromedriver_autoinstaller-0.6.4-py3-none-any.whl (7.6 kB)
+Using cached pytest_html-4.1.1-py3-none-any.whl (23 kB)
+Using cached py-1.11.0-py2.py3-none-any.whl (98 kB)
+Using cached allure_python_commons-2.13.2-py3-none-any.whl (14 kB)
+Using cached pytest_ordering-0.6-py3-none-any.whl (4.6 kB)
+Using cached flake8-7.1.1-py2.py3-none-any.whl (57 kB)
+Using cached urllib3-2.2.3-py3-none-any.whl (126 kB)
+Using cached certifi-2024.12.14-py3-none-any.whl (164 kB)
+Using cached charset_normalizer-3.4.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (146 kB)
+Using cached exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached jinja2-3.1.5-py3-none-any.whl (134 kB)
+Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Using cached pycodestyle-2.12.1-py2.py3-none-any.whl (31 kB)
+Using cached pyflakes-3.2.0-py2.py3-none-any.whl (62 kB)
+Using cached pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+Using cached trio-0.28.0-py3-none-any.whl (486 kB)
+Using cached trio_websocket-0.11.1-py3-none-any.whl (17 kB)
+Using cached websocket_client-1.8.0-py3-none-any.whl (58 kB)
+Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Using cached python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached wsproto-1.2.0-py3-none-any.whl (24 kB)
+Using cached outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Installing collected packages: sortedcontainers, paho-mqtt, assertpy, websocket-client, utils, urllib3, sniffio, six, setuptools, python-dotenv, pysocks, pyflakes, pycodestyle, py, outcome, mccabe, MarkupSafe, iniconfig, idna, h11, exceptiongroup, chromedriver-autoinstaller, charset-normalizer, certifi, allure-python-commons, wsproto, trio, requests, pytest, junit-xml, jinja2, flake8, webdriver-manager, trio-websocket, pytest-rerunfailures, pytest-ordering, pytest-metadata, curlify, allure-pytest, selenium, pytest-html
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 75.1.0
+    Uninstalling setuptools-75.1.0:
+      Successfully uninstalled setuptools-75.1.0
+  Attempting uninstall: allure-python-commons
+    Found existing installation: allure-python-commons 2.13.5
+    Uninstalling allure-python-commons-2.13.5:
+      Successfully uninstalled allure-python-commons-2.13.5
+Successfully installed MarkupSafe-3.0.2 allure-pytest-2.13.2 allure-python-commons-2.13.2 assertpy-1.1 certifi-2024.12.14 charset-normalizer-3.4.1 chromedriver-autoinstaller-0.6.4 curlify-2.2.1 exceptiongroup-1.2.2 flake8-7.1.1 h11-0.14.0 idna-3.10 iniconfig-2.0.0 jinja2-3.1.5 junit-xml-1.9 mccabe-0.7.0 outcome-1.3.0.post0 paho-mqtt-1.6.1 py-1.11.0 pycodestyle-2.12.1 pyflakes-3.2.0 pysocks-1.7.1 pytest-7.3.1 pytest-html-4.1.1 pytest-metadata-3.1.1 pytest-ordering-0.6 pytest-rerunfailures-11.1.2 python-dotenv-1.0.1 requests-2.32.3 selenium-4.27.1 setuptools-70.0.0 six-1.17.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.28.0 trio-websocket-0.11.1 urllib3-2.2.3 utils-1.0.2 webdriver-manager-4.0.1 websocket-client-1.8.0 wsproto-1.2.0
+  setup_ci: OK (13.50=setup[4.99]+cmd[8.51] seconds)
+  congratulations :) (13.60 seconds)
+functional_test-ci: 30380 I exit 0 (13.92 seconds) /home/jenkins/agent/workspace/test_5G_VI_API> sh -c 'if [ "$TEST_ENV" = "JENKINS" ]; then tox -e setup_ci; else tox -e setup_local; fi' pid=474 [tox/execute/api.py:286]
+functional_test-ci: 30381 W commands[0]> pytest -v -s tests/api_tests/test_middleware --config-file=/home/jenkins/agent/workspace/test_5G_VI_API/resources/config/config_qa.ini --alluredir=/home/jenkins/agent/workspace/test_5G_VI_API/allure-results --html=/home/jenkins/agent/workspace/test_5G_VI_API/report.html --self-contained-html --junitxml=/home/jenkins/agent/workspace/test_5G_VI_API/junit-results/report.xml [tox/tox_env/api.py:426]
+============================= test session starts ==============================
+platform linux -- Python 3.9.20, pytest-7.3.1, pluggy-1.5.0 -- /home/jenkins/agent/workspace/test_5G_VI_API/.tox/functional_test-ci/bin/python
+cachedir: .tox/functional_test-ci/.pytest_cache
+metadata: {'Python': '3.9.20', 'Platform': 'Linux-5.10.228-219.884.amzn2.x86_64-x86_64-with-glibc2.31', 'Packages': {'pytest': '7.3.1', 'pluggy': '1.5.0'}, 'Plugins': {'rerunfailures': '11.1.2', 'ordering': '0.6', 'metadata': '3.1.1', 'allure-pytest': '2.13.2', 'html': '4.1.1'}, 'CI': 'true', 'AWS_REGION': 'us-east-1', 'BUILD_NUMBER': '42', 'BUILD_ID': '42', 'BUILD_URL': 'https://jenkins-nonprod.tscloudservice.com/ts/job/test_5G_VI_API/42/', 'NODE_NAME': 'test-5g-vi-api-42-7jvqk-85gn8-640tn', 'JOB_NAME': 'test_5G_VI_API', 'BUILD_TAG': 'jenkins-test_5G_VI_API-42', 'EXECUTOR_NUMBER': '0', 'JENKINS_URL': 'https://jenkins-nonprod.tscloudservice.com/ts/', 'WORKSPACE': '/home/jenkins/agent/workspace/test_5G_VI_API'}
+rootdir: /home/jenkins/agent/workspace/test_5G_VI_API
+configfile: pytest.ini
+plugins: rerunfailures-11.1.2, ordering-0.6, metadata-3.1.1, allure-pytest-2.13.2, html-4.1.1
+collecting ... collected 44 items / 4 errors
+
+==================================== ERRORS ====================================
+___ ERROR collecting tests/api_tests/test_middleware/test_camera_onboard.py ____
+ImportError while importing test module '/home/jenkins/agent/workspace/test_5G_VI_API/tests/api_tests/test_middleware/test_camera_onboard.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/api_tests/test_middleware/test_camera_onboard.py:7: in <module>
+    from uaf_service_library_vision.api_libs.middleware_apis.camera_onboard_apis import CameraOnboardApis
+E   ModuleNotFoundError: No module named 'uaf_service_library_vision.api_libs.middleware_apis.camera_onboard_apis'
+________ ERROR collecting tests/api_tests/test_middleware/test_media.py ________
+ImportError while importing test module '/home/jenkins/agent/workspace/test_5G_VI_API/tests/api_tests/test_middleware/test_media.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/api_tests/test_middleware/test_media.py:7: in <module>
+    from uaf_service_library_vision.api_libs.middleware_apis.media_apis import MediaApis
+E   ModuleNotFoundError: No module named 'uaf_service_library_vision.api_libs.middleware_apis.media_apis'
+_________ ERROR collecting tests/api_tests/test_middleware/test_roi.py _________
+ImportError while importing test module '/home/jenkins/agent/workspace/test_5G_VI_API/tests/api_tests/test_middleware/test_roi.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/api_tests/test_middleware/test_roi.py:6: in <module>
+    from uaf_service_library_vision.api_libs.middleware_apis.roi_apis import RoiApis
+E   ModuleNotFoundError: No module named 'uaf_service_library_vision.api_libs.middleware_apis.roi_apis'
+________ ERROR collecting tests/api_tests/test_middleware/test_tags.py _________
+ImportError while importing test module '/home/jenkins/agent/workspace/test_5G_VI_API/tests/api_tests/test_middleware/test_tags.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/api_tests/test_middleware/test_tags.py:7: in <module>
+    from uaf_service_library_vision.api_libs.middleware_apis.tags_apis import TagsApis
+E   ModuleNotFoundError: No module named 'uaf_service_library_vision.api_libs.middleware_apis.tags_apis'
+- generated xml file: /home/jenkins/agent/workspace/test_5G_VI_API/junit-results/report.xml -
+- Generated html report: file:///home/jenkins/agent/workspace/test_5G_VI_API/report.html -
+=========================== short test summary info ============================
+ERROR tests/api_tests/test_middleware/test_camera_onboard.py
+ERROR tests/api_tests/test_middleware/test_media.py
+ERROR tests/api_tests/test_middleware/test_roi.py
+ERROR tests/api_tests/test_middleware/test_tags.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 4 errors in 0.30s ===============================
+functional_test-ci: 31598 C exit 2 (1.22 seconds) /home/jenkins/agent/workspace/test_5G_VI_API> pytest -v -s tests/api_tests/test_middleware --config-file=/home/jenkins/agent/workspace/test_5G_VI_API/resources/config/config_qa.ini --alluredir=/home/jenkins/agent/workspace/test_5G_VI_API/allure-results --html=/home/jenkins/agent/workspace/test_5G_VI_API/report.html --self-contained-html --junitxml=/home/jenkins/agent/workspace/test_5G_VI_API/junit-results/report.xml pid=787 [tox/execute/api.py:286]
+  functional_test-ci: FAIL code 2 (31.30=setup[16.17]+cmd[13.92,1.22] seconds)
+  evaluation failed :( (31.41 seconds)
++ true
+[Pipeline] }
+[Pipeline] // catchError
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Publish & Archive Results)
+[Pipeline] sh
++ mkdir -p allure-results
++ mkdir -p junit-results
++ echo Checking for HTML report again:
+Checking for HTML report again:
++ ls -l /home/jenkins/agent/workspace/test_5G_VI_API/report.html
+-rw-r--r-- 1 root root 37141 Jan 21 14:36 /home/jenkins/agent/workspace/test_5G_VI_API/report.html
+[Pipeline] allure
+Unpacking https://repo1.maven.org/maven2/io/qameta/allure/allure-commandline/2.30.0/allure-commandline-2.30.0.zip to /home/jenkins/agent/tools/ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation/allure on test-5g-vi-api-42-7jvqk-85gn8-640tn
+Executing sh script inside container python3 of pod test-5g-vi-api-42-7jvqk-85gn8-640tn
+Executing command: "/home/jenkins/agent/tools/ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation/allure/bin/allure" "generate" "-c" "-o" "/home/jenkins/agent/workspace/test_5G_VI_API/allure-report" 
+exit
+Report successfully generated to /home/jenkins/agent/workspace/test_5G_VI_API/allure-report
+Allure report was successfully generated.
+Creating artifact for the build.
+Artifact was added to the build.
+[Pipeline] echo
+Sending build notification email...
+[Pipeline] emailext
+Sending email to: jayanth.r@in.verizon.com himanshu.singh@in.verizon.com velagala.ganesh.srinivasa.reddy@in.verizon.com upendra.singh@in.verizon.com tuan.nguyen2@verizon.com vinod.marga.bhat@in.verizon.com
+[Pipeline] echo
+Archiving Results...
+[Pipeline] retry
+[Pipeline] {
+[Pipeline] archiveArtifacts
+Archiving artifacts
+Uploaded 2 artifact(s) to https://349211140923-jenkins-team-ts.s3.amazonaws.com/artifacts/test_5G_VI_API/42/artifacts/
+[Pipeline] }
+[Pipeline] // retry
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // container
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // podTemplate
+[Pipeline] End of Pipeline
+Finished: SUCCESS
